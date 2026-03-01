@@ -52,4 +52,10 @@ export const userAPI = {
   getAllUsers: () => api.get('/users'),
 };
 
+// Collision detection endpoints
+export const collisionAPI = {
+  analyzeCollisions: () => api.get('/collision/analyze'),
+  checkTaskCollision: (data) => api.post('/collision/check', data),
+};
+
 export default api;

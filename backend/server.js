@@ -6,6 +6,7 @@ const connectDB = require('./src/config/db');
 // Import routes
 const authRoutes = require('./src/routes/authRoutes');
 const userRoutes = require('./src/routes/userRoutes');
+const collisionRoutes = require('./src/routes/collisionRoutes');
 
 // Initialize express app
 const app = express();
@@ -38,6 +39,7 @@ app.get('/health', (req, res) => {
 // API Routes
 app.use('/api/auth', authRoutes);
 app.use('/api/users', userRoutes);
+app.use('/api/collision', collisionRoutes);
 
 // Root route
 app.get('/', (req, res) => {
@@ -47,6 +49,7 @@ app.get('/', (req, res) => {
     version: '1.0.0',
     endpoints: {
       auth: '/api/auth',
+      collision: '/api/collision',
       users: '/api/users',
       health: '/health',
     },
