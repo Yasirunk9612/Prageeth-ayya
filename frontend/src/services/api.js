@@ -52,4 +52,13 @@ export const userAPI = {
   getAllUsers: () => api.get('/users'),
 };
 
+// Task endpoints
+export const taskAPI = {
+  createTask: (data) => api.post('/tasks', data),
+  getTasks: () => api.get('/tasks'),
+  getTask: (id) => api.get(`/tasks/${id}`),
+  updateTask: (id, data) => api.put(`/tasks/${id}`, data),
+  deleteTask: (id) => api.delete(`/tasks/${id}`),
+};
+
 export default api;
