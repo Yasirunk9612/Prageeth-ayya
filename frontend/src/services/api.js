@@ -52,6 +52,11 @@ export const userAPI = {
   getAllUsers: () => api.get('/users'),
 };
 
+// Burnout analysis endpoints
+export const burnoutAPI = {
+  analyzeBurnout: () => api.get('/burnout/analyze'),
+  getHistory: (limit = 10) => api.get(`/burnout/history?limit=${limit}`),
+  getLatest: () => api.get('/burnout/latest'),
 // Collision detection endpoints
 export const collisionAPI = {
   analyzeCollisions: () => api.get('/collision/analyze'),

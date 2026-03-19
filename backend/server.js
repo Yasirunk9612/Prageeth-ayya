@@ -6,6 +6,7 @@ const connectDB = require('./src/config/db');
 // Import routes
 const authRoutes = require('./src/routes/authRoutes');
 const userRoutes = require('./src/routes/userRoutes');
+const burnoutRoutes = require('./src/routes/burnoutRoutes');
 const collisionRoutes = require('./src/routes/collisionRoutes');
 const taskRoutes = require('./src/routes/taskRoutes');
 
@@ -40,6 +41,7 @@ app.get('/health', (req, res) => {
 // API Routes
 app.use('/api/auth', authRoutes);
 app.use('/api/users', userRoutes);
+app.use('/api/burnout', burnoutRoutes);
 app.use('/api/collision', collisionRoutes);
 app.use('/api/tasks', taskRoutes);
 
@@ -53,6 +55,7 @@ app.get('/', (req, res) => {
       auth: '/api/auth',
       collision: '/api/collision',
       users: '/api/users',
+      burnout: '/api/burnout',
       tasks: '/api/tasks',
       health: '/health',
     },

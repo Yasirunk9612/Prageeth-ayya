@@ -25,6 +25,7 @@ const Sidebar = () => {
 
   const navItems = [
     { icon: Home, label: 'Dashboard', path: '/dashboard' },
+    { icon: AlertTriangle, label: 'Burnout Analysis', path: '/burnout-analysis' },
     { icon: AlertTriangle, label: 'Collision Analysis', path: '/collision-analysis' },
     { icon: CheckSquare, label: 'My Tasks', path: '/tasks' },
     { icon: Calendar, label: 'Deadlines', path: '/deadlines' },
