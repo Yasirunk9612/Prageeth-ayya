@@ -3,8 +3,7 @@ import { useNavigate, useLocation } from 'react-router-dom';
 import { AuthContext } from '../context/AuthContext';
 import { 
   LogOut, Menu, X, Home, User, BarChart3, Calendar, 
-  Settings, Shield, Bell, Activity, AlertTriangle 
-  Settings, Shield, Bell, Activity, CheckSquare 
+  Settings, Shield, Bell, Activity, AlertTriangle, CheckSquare
 } from 'lucide-react';
 
 const Sidebar = () => {
@@ -63,7 +62,7 @@ const Sidebar = () => {
         {/* Logo */}
         <div className="mb-8 pt-12 md:pt-2">
           <div className="flex items-center gap-3 mb-1">
-            <div className="p-2 bg-gradient-to-br from-indigo-500 to-teal-500 rounded-xl shadow-lg">
+            <div className="p-2 bg-linear-to-br from-indigo-500 to-teal-500 rounded-xl shadow-lg">
               <Shield size={24} className="text-white" />
             </div>
             <div>
@@ -75,9 +74,9 @@ const Sidebar = () => {
 
         {/* User Info Card */}
         {user && (
-          <div className="mb-6 p-4 bg-gradient-to-br from-indigo-500/10 to-teal-500/10 rounded-xl border border-indigo-500/20">
+          <div className="mb-6 p-4 bg-linear-to-br from-indigo-500/10 to-teal-500/10 rounded-xl border border-indigo-500/20">
             <div className="flex items-center gap-3 mb-2">
-              <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-indigo-500 to-teal-500 flex items-center justify-center text-white font-bold shadow-lg">
+              <div className="w-11 h-11 rounded-xl bg-linear-to-br from-indigo-500 to-teal-500 flex items-center justify-center text-white font-bold shadow-lg">
                 {user.name?.charAt(0).toUpperCase()}
               </div>
               <div className="flex-1 min-w-0">
@@ -110,7 +109,7 @@ const Sidebar = () => {
                 onClick={() => handleNavigation(item.path)}
                 className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl font-medium transition-all duration-200 ${
                   isActive
-                    ? 'bg-gradient-to-r from-indigo-500 to-indigo-600 text-white shadow-lg shadow-indigo-500/30'
+                    ? 'bg-linear-to-r from-indigo-500 to-indigo-600 text-white shadow-lg shadow-indigo-500/30'
                     : 'text-slate-300 hover:bg-white/5 hover:text-slate-100'
                 }`}
               >

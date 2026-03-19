@@ -57,10 +57,14 @@ export const burnoutAPI = {
   analyzeBurnout: () => api.get('/burnout/analyze'),
   getHistory: (limit = 10) => api.get(`/burnout/history?limit=${limit}`),
   getLatest: () => api.get('/burnout/latest'),
+};
+
 // Collision detection endpoints
 export const collisionAPI = {
   analyzeCollisions: () => api.get('/collision/analyze'),
   checkTaskCollision: (data) => api.post('/collision/check', data),
+};
+
 // Task endpoints
 export const taskAPI = {
   createTask: (data) => api.post('/tasks', data),

@@ -41,10 +41,18 @@ function App() {
             element={
               <ProtectedRoute>
                 <BurnoutAnalysisPage />
+              </ProtectedRoute>
+            }
+          />
+          <Route
             path="/collision-analysis"
             element={
               <ProtectedRoute>
                 <CollisionAnalysisPage />
+              </ProtectedRoute>
+            }
+          />
+          <Route
             path="/tasks"
             element={
               <ProtectedRoute>
