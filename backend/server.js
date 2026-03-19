@@ -7,6 +7,7 @@ const connectDB = require('./src/config/db');
 const authRoutes = require('./src/routes/authRoutes');
 const userRoutes = require('./src/routes/userRoutes');
 const collisionRoutes = require('./src/routes/collisionRoutes');
+const taskRoutes = require('./src/routes/taskRoutes');
 
 // Initialize express app
 const app = express();
@@ -40,6 +41,7 @@ app.get('/health', (req, res) => {
 app.use('/api/auth', authRoutes);
 app.use('/api/users', userRoutes);
 app.use('/api/collision', collisionRoutes);
+app.use('/api/tasks', taskRoutes);
 
 // Root route
 app.get('/', (req, res) => {
@@ -51,6 +53,7 @@ app.get('/', (req, res) => {
       auth: '/api/auth',
       collision: '/api/collision',
       users: '/api/users',
+      tasks: '/api/tasks',
       health: '/health',
     },
   });
