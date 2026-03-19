@@ -6,6 +6,9 @@ import RegisterPage from './pages/RegisterPage';
 import DashboardPage from './pages/DashboardPage';
 import ProfilePage from './pages/ProfilePage';
 import BurnoutAnalysisPage from './pages/BurnoutAnalysisPage';
+import CollisionAnalysisPage from './pages/CollisionAnalysisPage';
+import TaskListPage from './pages/TaskListPage';
+import AddTaskPage from './pages/AddTaskPage';
 
 function App() {
   return (
@@ -38,6 +41,22 @@ function App() {
             element={
               <ProtectedRoute>
                 <BurnoutAnalysisPage />
+            path="/collision-analysis"
+            element={
+              <ProtectedRoute>
+                <CollisionAnalysisPage />
+            path="/tasks"
+            element={
+              <ProtectedRoute>
+                <TaskListPage />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/tasks/add"
+            element={
+              <ProtectedRoute>
+                <AddTaskPage />
               </ProtectedRoute>
             }
           />
