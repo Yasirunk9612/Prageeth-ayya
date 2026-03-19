@@ -5,6 +5,7 @@ import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
 import DashboardPage from './pages/DashboardPage';
 import ProfilePage from './pages/ProfilePage';
+import CollisionAnalysisPage from './pages/CollisionAnalysisPage';
 import TaskListPage from './pages/TaskListPage';
 import AddTaskPage from './pages/AddTaskPage';
 
@@ -35,6 +36,10 @@ function App() {
             }
           />
           <Route
+            path="/collision-analysis"
+            element={
+              <ProtectedRoute>
+                <CollisionAnalysisPage />
             path="/tasks"
             element={
               <ProtectedRoute>
