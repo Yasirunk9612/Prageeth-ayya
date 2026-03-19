@@ -5,6 +5,8 @@ import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
 import DashboardPage from './pages/DashboardPage';
 import ProfilePage from './pages/ProfilePage';
+import TaskListPage from './pages/TaskListPage';
+import AddTaskPage from './pages/AddTaskPage';
 
 function App() {
   return (
@@ -29,6 +31,22 @@ function App() {
             element={
               <ProtectedRoute>
                 <ProfilePage />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/tasks"
+            element={
+              <ProtectedRoute>
+                <TaskListPage />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/tasks/add"
+            element={
+              <ProtectedRoute>
+                <AddTaskPage />
               </ProtectedRoute>
             }
           />
